@@ -23,7 +23,7 @@ class UserController extends Controller
         $shapass = $encrypted.Crypt::encryptString($key);
         $str = "/";
         $index = strpos($shapass,$str);
-        dd(substr($shapass,$index));
+        
         $decrypted = substr($shapass,$index);
         $de = Crypt::decryptString($decrypted);
 
